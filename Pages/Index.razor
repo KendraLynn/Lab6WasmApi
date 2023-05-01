@@ -1,0 +1,22 @@
+﻿private List<BlogPost> blogPosts;
+
+protected override async Task OnInitializedAsync()
+{
+    blogPosts = await HttpClient.GetFromJsonAsync<List<BlogPost>>("/blog");
+}
+
+public void Dispose()
+{
+    HttpClient.Dispose();
+}
+private List<BlogPost> blogPosts;
+
+protected override async Task OnInitializedAsync()
+{
+    blogPosts = await HttpClient.GetFromJsonAsync<List<BlogPost>>("/blog");
+}
+
+public void Dispose()
+{
+    HttpClient.Dispose();
+}
